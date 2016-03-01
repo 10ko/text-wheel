@@ -2,40 +2,17 @@
 <html>
 <head>
     <title></title>
+    <style type="text/css" media="screen">
+        #text-container {
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
+    <script src="text-wheel.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 <body>
     <article>
-    <p id="text-container">text</p>
+    <h1 id="text-container">text</h1>
     </article>
-
-    <script type="text/javascript">
-        var bod     = document.getElementsByTagName('body')[0],
-        p = document.getElementById('text-container');
-
-        var text = [
-        '<a href="https://www.google.com" target="_blank">text changed 1</a>',
-        'text changed 1'
-
-        ];
-        var run = false;
-        var counter = 0;
-        setInterval(function() {
-            if(run) {
-                p.innerHTML = text[counter];
-                counter < text.length-1 ? counter++ : counter = 0;
-            }
-        }, 100);
-
-        p.addEventListener("mouseover",function() {
-            run = true;
-
-        },false);
-
-        p.addEventListener("mouseleave", function() {
-            run = false;
-            p.innerHTML = 'text';
-        }, false);
-    </script>
-
 </body>
 </html>
